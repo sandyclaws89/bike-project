@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Bike;
 use Illuminate\Http\Request;
+use App\Bike;
 
 class BikeController extends Controller
 {
@@ -14,8 +14,8 @@ class BikeController extends Controller
      */
     public function index()
     {
-        // $bikes = Bike::paginate(15);
-        // return view ('bikes.index',  compact('bikes'));
+        $bikes = Bike::paginate(15);
+        return view ('bikes.index',  compact('bikes'));
         return view ('bikes.index');
     }
 

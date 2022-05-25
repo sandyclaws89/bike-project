@@ -15,7 +15,16 @@ class CreateBikesTable extends Migration
     {
         Schema::create('bikes', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('image', 250);
+            $table->string('post_title', 250)->nullable();
+            $table->string('bike_name', 250);
+            $table->text('description')->nullable();;
+            $table->char('price');
+            $table->string('brand', 150)->nullable();
+            $table->string('model', 150)->nullable();
+            $table->date('year')->nullable();
+            $table->string('type', 250);
+            $table->boolean('available')->nullable()->default(true);
         });
     }
 
