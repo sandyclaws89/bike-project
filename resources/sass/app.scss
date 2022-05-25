@@ -1,1 +1,33 @@
 @import "~bootstrap/scss/bootstrap";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+.card{
+    color: $dark;
+}
+    // .index{
+    //     margin: 10px 0;
+    //     text-align: center;
+    //     width: 100vw;
+    //     .card-container{
+    //         display: flex;
+    //         width: 85vw;
+    //         flex-wrap: wrap;
+    //         justify-content: center;
+    //         .card {
+    //             width:calc((100% / 4) - 15px);
+    //             background-color:azure;
+    //             h2{
+    //                 padding: 20px;
+    //             }
+
+    //         }
+    //     }
+    // }
+
+
+

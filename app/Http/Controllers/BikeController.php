@@ -16,7 +16,6 @@ class BikeController extends Controller
     {
         $bikes = Bike::paginate(15);
         return view ('bikes.index',  compact('bikes'));
-        return view ('bikes.index');
     }
 
     /**
@@ -26,7 +25,7 @@ class BikeController extends Controller
      */
     public function create()
     {
-
+        return view('bikes.create');
     }
 
     /**
@@ -48,7 +47,10 @@ class BikeController extends Controller
      */
     public function show(Bike $bike)
     {
-        //
+        return view('bikes.show', [
+            'DocumentTitle' =>  $bike->bike_name,
+            'bike'          =>  $bike,
+        ]);
     }
 
     /**
