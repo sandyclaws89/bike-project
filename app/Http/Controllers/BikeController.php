@@ -36,7 +36,10 @@ class BikeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+
+        $newBike = Bike::create($formData);
+        return redirect()->route('bikes.index', $newBike->id);
     }
 
     /**
